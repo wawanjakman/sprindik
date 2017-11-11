@@ -57,7 +57,7 @@
               <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
             </div>
             <div class="col-xs-offset-4 col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
+              <button type="submit1" class="btn btn-primary btn-block btn-flat">Sign Up</button>
             </div>                    
 
           </div>
