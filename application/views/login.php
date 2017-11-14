@@ -35,8 +35,6 @@
         <p class="login-box-msg">
           Log in to start your session
         </p>
-
-        <form action="<?php echo base_url('Auth/login'); ?>" method="post">
           <div class="form-group has-feedback">
             <input type="text" class="form-control" placeholder="Username" name="username">
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -44,7 +42,7 @@
           <div class="form-group has-feedback">
             <input type="password" class="form-control" placeholder="Password" name="password">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-          </div>
+          </div> 
           <div class="row">
              <!--<div class="col-xs-8">
               <div class="checkbox icheck">
@@ -54,26 +52,22 @@
               </div>
             </div> -->
             <div class="col-xs-offset-16 col-xs-4">
+            <form action="<?php echo base_url('Auth/login'); ?>" method="post">
               <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+              </form>
             </div>
             <div class="col-xs-offset-4 col-xs-4">
-<<<<<<< HEAD
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
+            <form action="<?php echo base_url('users/registration'); ?>" method="post">
+              <button method="post" type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
+              </form>
             </div>                    
-||||||| merged common ancestors
-              <button type="submit1" class="btn btn-primary btn-block btn-flat">Sign Up</button>
-            </div>                    
-=======
-              <button type="submit1" class="btn btn-primary btn-block btn-flat">Sign Up</button>
-            </div>
-            <div class="col-xs-offset-4 col-xs-4">
+            <div class="col-xs-offset-1 col-xs-8">
               <p class="">Don't have an account? <a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
             </div>
-			
->>>>>>> a7bc79b086a8e7eaf61e02f6abf019194bcde578
+		
 
           </div>
-        </form>
+        
 
         <!-- <div class="social-auth-links text-center">
           <p>- OR -</p>
