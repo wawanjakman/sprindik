@@ -57,8 +57,20 @@
               <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
             </div>
             <div class="col-xs-offset-4 col-xs-4">
+<<<<<<< HEAD
               <button type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
             </div>                    
+||||||| merged common ancestors
+              <button type="submit1" class="btn btn-primary btn-block btn-flat">Sign Up</button>
+            </div>                    
+=======
+              <button type="submit1" class="btn btn-primary btn-block btn-flat">Sign Up</button>
+            </div>
+            <div class="col-xs-offset-4 col-xs-4">
+              <p class="btn btn-primary btn-block btn-flat">Don't have an account? <a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
+            </div>
+			
+>>>>>>> a7bc79b086a8e7eaf61e02f6abf019194bcde578
 
           </div>
         </form>

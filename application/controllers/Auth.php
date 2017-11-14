@@ -48,6 +48,40 @@ class Auth extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('Auth');
 	}
+	/*
+     * User registration
+     */
+    public function registration(){
+        $data = array();
+        $userData = array();
+        if($this->input->post('regisSubmit')){
+            $this->form_validation->set_rules('name', 'Name', 'required');
+            $this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_email_check');
+            $this->form_validation->set_rules('password', 'password', 'required');
+            $this->form_validation->set_rules('conf_password', 'confirm password', 'required|matches[password]');
+
+            $userData = array(
+                'name' => strip_tags($this->input->post('name')),
+                'email' => strip_tags($this->input->post('email')),
+                'password' => md5($this->input->post('password')),
+                'gender' => $this->input->post('gender'),
+                'phone' => strip_tags($this->input->post('phone'))
+            );
+
+            if($this->form_validation->run() == true){
+                $insert = $this->user->insert($userData);
+                if($insert){
+                    $this->session->set_userdata('success_msg', 'Your registration was successfully. Please login to your account.');
+                    redirect('users/login');
+                }else{
+                    $data['error_msg'] = 'Some problems occured, please try again.';
+                }
+            }
+        }
+        $data['user'] = $userData;
+        //load the view
+        $this->load->view('users/registration', $data);
+    }
 }
 
 /* End of file Login.php */
