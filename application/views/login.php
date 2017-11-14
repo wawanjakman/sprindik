@@ -27,7 +27,7 @@
   <body class="hold-transition login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="<?php echo base_url(); ?>assets/index2.html"><b>Admin</b>CRUD 1</a>
+        <a href="<?php echo base_url(); ?>assets/index2.html"><b>Admin</b>CRUD</a>
       </div>
 
       <!-- /.login-logo -->
@@ -57,7 +57,7 @@
               <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
             </div>
             <div class="col-xs-offset-4 col-xs-4">
-              <button type="submit1" class="btn btn-primary btn-block btn-flat">Sign Up</button>
+              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
             </div>                    
 
           </div>
