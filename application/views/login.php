@@ -62,9 +62,9 @@
               <button method="post" type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
               </form>
             </div>                    
-            <div class="col-xs-offset-1 col-xs-8">
+            <!--<div class="col-xs-offset-1 col-xs-8">
               <p class="">Don't have an account? <a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
-            </div>
+            </div>-->
           </div>
         </form>
 
