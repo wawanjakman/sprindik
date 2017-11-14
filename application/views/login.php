@@ -35,6 +35,7 @@
         <p class="login-box-msg">
           Log in to start your session
         </p>
+        <form action="<?php echo base_url('Auth/login'); ?>" method="post">
           <div class="form-group has-feedback">
             <input type="text" class="form-control" placeholder="Username" name="username">
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -64,10 +65,8 @@
             <div class="col-xs-offset-1 col-xs-8">
               <p class="">Don't have an account? <a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
             </div>
-    
-
           </div>
-        
+        </form>
 
         <!-- <div class="social-auth-links text-center">
           <p>- OR -</p>
