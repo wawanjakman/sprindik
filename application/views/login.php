@@ -57,7 +57,7 @@
               <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
             </div>
             <div class="col-xs-offset-4 col-xs-4">
-              <button type="submit1" class="btn btn-primary btn-block btn-flat">Sign Up</button>
+              <button type="submit1" class="btn btn-primary btn-block btn-flat"><a href="<?php echo base_url(); ?>users/registration">Sign Up</a></button>
             </div>
             <div class="col-xs-offset-4 col-xs-4">
               <p class="">Don't have an account? <a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
