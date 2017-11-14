@@ -17,66 +17,66 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cendana`
+-- Database: 'cendana'
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Struktur dari tabel 'admin'
 --
 
-CREATE TABLE `admin` (
-  `id` int(11) NOT NULL,
-  `username` varchar(15) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
-  `nama` varchar(50) DEFAULT NULL,
-  `foto` varchar(255) DEFAULT NULL
+CREATE TABLE 'admin' (
+  'id' int(11) NOT NULL,
+  'username' varchar(15) DEFAULT NULL,
+  'password' varchar(50) DEFAULT NULL,
+  'nama' varchar(50) DEFAULT NULL,
+  'foto' varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data untuk tabel 'admin'
 --
 
-INSERT INTO `admin` (`id`, `username`, `password`, `nama`, `foto`) VALUES
+INSERT INTO 'admin' ('id', 'username', 'password', 'nama', 'foto') VALUES
 (1, 'auwfar', 'f0a047143d1da15b630c73f0256d5db0', 'Achmad Chadil Auwfar', 'Koala.jpg'),
 (2, 'ozil', 'f4e404c7f815fc68e7ce8e3c2e61e347', 'Mesut ', 'profil2.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelamin`
+-- Struktur dari tabel 'kelamin'
 --
 
-CREATE TABLE `kelamin` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(50) DEFAULT NULL
+CREATE TABLE 'kelamin' (
+  'id' int(11) NOT NULL,
+  'nama' varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kelamin`
+-- Dumping data untuk tabel 'kelamin'
 --
 
-INSERT INTO `kelamin` (`id`, `nama`) VALUES
+INSERT INTO 'kelamin' ('id', 'nama') VALUES
 (1, 'Laki laki'),
 (2, 'Perempuan');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kota`
+-- Struktur dari tabel 'kota'
 --
 
-CREATE TABLE `kota` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(255) DEFAULT NULL
+CREATE TABLE 'kota' (
+  'id' int(11) NOT NULL,
+  'nama' varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kota`
+-- Dumping data untuk tabel 'kota'
 --
 
-INSERT INTO `kota` (`id`, `nama`) VALUES
+INSERT INTO 'kota' ('id', 'nama') VALUES
 (1, 'Malang'),
 (3, 'Blitar'),
 (4, 'Tulungagung'),
@@ -87,24 +87,24 @@ INSERT INTO `kota` (`id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pegawai`
+-- Struktur dari tabel 'pegawai'
 --
 
-CREATE TABLE `pegawai` (
-  `id` varchar(255) NOT NULL,
-  `nama` varchar(255) DEFAULT NULL,
-  `telp` varchar(255) DEFAULT NULL,
-  `id_kota` int(11) DEFAULT NULL,
-  `id_kelamin` int(1) DEFAULT NULL,
-  `id_posisi` int(11) DEFAULT NULL,
-  `status` int(1) DEFAULT NULL
+CREATE TABLE 'pegawai' (
+  'id' varchar(255) NOT NULL,
+  'nama' varchar(255) DEFAULT NULL,
+  'telp' varchar(255) DEFAULT NULL,
+  'id_kota' int(11) DEFAULT NULL,
+  'id_kelamin' int(1) DEFAULT NULL,
+  'id_posisi' int(11) DEFAULT NULL,
+  'status' int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pegawai`
+-- Dumping data untuk tabel 'pegawai'
 --
 
-INSERT INTO `pegawai` (`id`, `nama`, `telp`, `id_kota`, `id_kelamin`, `id_posisi`, `status`) VALUES
+INSERT INTO 'pegawai' ('id', 'nama', 'telp', 'id_kota', 'id_kelamin', 'id_posisi', 'status') VALUES
 ('10', 'Antony Febriansyah Hartono', '082199568540', 1, 1, 1, 1),
 ('11', 'Hafizh Asrofil Al Banna', '087859615271', 1, 1, 1, 1),
 ('12', 'Faiq Fajrullah', '085736333728', 1, 1, 2, 1),
@@ -120,19 +120,19 @@ INSERT INTO `pegawai` (`id`, `nama`, `telp`, `id_kota`, `id_kelamin`, `id_posisi
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `posisi`
+-- Struktur dari tabel 'posisi'
 --
 
-CREATE TABLE `posisi` (
-  `id` int(11) NOT NULL,
-  `nama` varchar(255) DEFAULT NULL
+CREATE TABLE 'posisi' (
+  'id' int(11) NOT NULL,
+  'nama' varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `posisi`
+-- Dumping data untuk tabel 'posisi'
 --
 
-INSERT INTO `posisi` (`id`, `nama`) VALUES
+INSERT INTO 'posisi' ('id', 'nama') VALUES
 (1, 'IT'),
 (2, 'HRD'),
 (3, 'Keuangan'),
@@ -144,48 +144,48 @@ INSERT INTO `posisi` (`id`, `nama`) VALUES
 --
 
 --
--- Indexes for table `admin`
+-- Indexes for table 'admin'
 --
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE 'admin'
+  ADD PRIMARY KEY ('id');
 
 --
--- Indexes for table `kelamin`
+-- Indexes for table 'kelamin'
 --
-ALTER TABLE `kelamin`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE 'kelamin'
+  ADD PRIMARY KEY ('id');
 
 --
--- Indexes for table `kota`
+-- Indexes for table 'kota'
 --
-ALTER TABLE `kota`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE 'kota'
+  ADD PRIMARY KEY ('id');
 
 --
--- Indexes for table `posisi`
+-- Indexes for table 'posisi'
 --
-ALTER TABLE `posisi`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE 'posisi'
+  ADD PRIMARY KEY ('id');
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for table 'admin'
 --
-ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE 'admin'
+  MODIFY 'id' int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `kota`
+-- AUTO_INCREMENT for table 'kota'
 --
-ALTER TABLE `kota`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+ALTER TABLE 'kota'
+  MODIFY 'id' int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
--- AUTO_INCREMENT for table `posisi`
+-- AUTO_INCREMENT for table 'posisi'
 --
-ALTER TABLE `posisi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE 'posisi'
+  MODIFY 'id' int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
