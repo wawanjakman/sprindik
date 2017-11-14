@@ -57,14 +57,30 @@
               </form>
             </div>
             <div class="col-xs-offset-4 col-xs-4">
+<<<<<<< HEAD
             <form action="<?php echo base_url('users/registration'); ?>" method="post">
               <button method="post" type="submit" class="btn btn-primary btn-block btn-flat">Sign Up</button>
               </form>
             </div>                    
             <div class="col-xs-offset-1 col-xs-8">
               <p class="">Don't have an account? <a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
+||||||| merged common ancestors
+              <button type="submit1" class="btn btn-primary btn-block btn-flat">Sign Up</button>
             </div>
+            <div class="col-xs-offset-4 col-xs-4">
+              <p class="">Don't have an account? <a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
+=======
+              <p class=""><a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
+>>>>>>> 391bdb2e381ea6e3871f7d622977252efb087a5a
+            </div>
+<<<<<<< HEAD
 		
+||||||| merged common ancestors
+			
+=======
+            
+			
+>>>>>>> 391bdb2e381ea6e3871f7d622977252efb087a5a
 
           </div>
         
