@@ -113,22 +113,23 @@
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
-				                    <form role="form" action="<?php echo base_url('users/registration'); ?>" method="post" class="registration-form">
-				                    	<div class="form-group">
-											<input type="text" class="form-control" name="name" placeholder="Name" required="" value="<?php echo !empty($user['name'])?$user['name']:''; ?>">
-										  <?php echo form_error('name','<span class="help-block">','</span>'); ?>
-										</div>
-										<div class="form-group">
-										  <input type="password" class="form-control" name="password" placeholder="Password" required="">
-										  <?php echo form_error('password','<span class="help-block">','</span>'); ?>
-										</div>
-										<div class="form-group">
-										  <input type="password" class="form-control" name="conf_password" placeholder="Confirm password" required="">
-										  <?php echo form_error('conf_password','<span class="help-block">','</span>'); ?>
-										</div>
-										<div class="form-group">
-											<input type="submit" name="regisSubmit" class="btn-primary" value="Submit"/>
-										</div>
+				                    <form role="form" action="<?php echo base_url('user/register_user'); ?>" method="post" class="registration-form">
+				                    	<fieldset>
+										  <div class="form-group">
+											  <input class="form-username form-control" placeholder="Username" name="user_name" type="text" autofocus>
+										  </div>
+										  <div class="form-group">
+											  <input class="form-password form-control" placeholder="Password" name="user_password" type="password" value="" autofocus>
+										  </div>
+										  <div class="form-group">
+											  <input class="form-username form-control" placeholder="E-mail" name="user_email" type="email" autofocus>
+										  </div>
+										  <div class="form-group">
+											  <input class="form-username form-control" placeholder="Mobile No" name="user_mobile" type="number" value="" autofocus>
+										  </div>
+											  <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register" >
+
+										 </fieldset>
 				                    </form>
 			                    </div>
                         	</div>
