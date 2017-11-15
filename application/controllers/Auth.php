@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Auth extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('M_auth');
+		$this->load->model('M_user');
 	}
 	
 	public function index() {
@@ -25,7 +25,7 @@ class Auth extends CI_Controller {
 			$username = trim($_POST['username']);
 			$password = trim($_POST['password']);
 
-			$data = $this->M_auth->login($username, $password);
+			$data = $this->M_user->login($username, $password);
 
 			if ($data == false) {
 				$this->session->set_flashdata('error_msg', 'Username / Password Anda Salah.');

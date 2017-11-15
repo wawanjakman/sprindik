@@ -113,25 +113,22 @@
 	                        		</div>
 	                            </div>
 	                            <div class="form-bottom">
-				                    <form role="form" action="" method="post" class="registration-form">
+				                    <form role="form" action="<?php echo base_url('users/registration'); ?>" method="post" class="registration-form">
 				                    	<div class="form-group">
-				                    		<label class="sr-only" for="form-first-name">First name</label>
-				                        	<input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-last-name">Last name</label>
-				                        	<input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-email">Email</label>
-				                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-about-yourself">About yourself</label>
-				                        	<textarea name="form-about-yourself" placeholder="About yourself..." 
-				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
-				                        </div>
-				                        <button type="submit" class="btn">Sign me up!</button>
+											<input type="text" class="form-control" name="name" placeholder="Name" required="" value="<?php echo !empty($user['name'])?$user['name']:''; ?>">
+										  <?php echo form_error('name','<span class="help-block">','</span>'); ?>
+										</div>
+										<div class="form-group">
+										  <input type="password" class="form-control" name="password" placeholder="Password" required="">
+										  <?php echo form_error('password','<span class="help-block">','</span>'); ?>
+										</div>
+										<div class="form-group">
+										  <input type="password" class="form-control" name="conf_password" placeholder="Confirm password" required="">
+										  <?php echo form_error('conf_password','<span class="help-block">','</span>'); ?>
+										</div>
+										<div class="form-group">
+											<input type="submit" name="regisSubmit" class="btn-primary" value="Submit"/>
+										</div>
 				                    </form>
 			                    </div>
                         	</div>
