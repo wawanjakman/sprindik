@@ -46,6 +46,13 @@
           <span>Data Kota</span>
         </a>
       </li>
+
+      <li <?php if ($page == 'refDiklat') {echo 'class="active"';} ?>>
+        <a href="<?php echo base_url('RefDiklat'); ?>">
+          <i class="fa fa-location-arrow"></i>
+          <span>Referensi Diklat</span>
+        </a>
+      </li>
     </ul>
     <!-- /.sidebar-menu -->
   </section>
