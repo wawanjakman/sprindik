@@ -17,26 +17,42 @@ $this->load->view("index.php");
 }
 
 public function register_user(){
-
-      $user=array(
+	$this->form_validation->set_rules('user_name', 'Username', 'required|min_length[4]|max_length[15]');
+	$this->form_validation->set_rules('user_password', 'Password', 'required');
+	if ($this->form_validation->run() == TRUE) {
+		/* $user=array(
       'username'=>$this->input->post('user_name'),
 	  'password'=>md5($this->input->post('user_password')),
       'email'=>$this->input->post('user_email'),
       'nohp'=>$this->input->post('user_mobile')
+        ); */
+		
+		$user=array(
+		'username'=>$this->input->post('user_name'),
+		'password'=>md5($this->input->post('user_password'))
         );
         print_r($user);
 		$this->user_model->register_user($user);
 
-$email_check=$this->user_model->email_check($user['user_email']);
-//var_dump($email_check);
-	if($email_check){
-	  $this->user_model->register_user($user);
-	  $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
-	  redirect('user/login_view');
-	}else{
-	  $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
-	  redirect('user');
+		$nama_check=$this->user_model->nama_check($user['username']);
+		//var_dump($email_check);
+		if($nama_check){
+		  $this->user_model->register_user($user);
+		  $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
+		  //redirect('user/login_view');
+		  redirect('user');
+		}else{
+		  $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
+		  redirect('user');
+		}
+		
+	} else {
+			$this->session->set_flashdata('error_msg', validation_errors());
+			redirect('Auth');
 	}
+
+
+
  
 }
 

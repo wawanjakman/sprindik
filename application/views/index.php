@@ -116,17 +116,17 @@
 				                    <form role="form" action="<?php echo base_url('user/register_user'); ?>" method="post" class="registration-form">
 				                    	<fieldset>
 										  <div class="form-group">
-											  <input class="form-username form-control" placeholder="Username" name="user_name" type="text" autofocus>
+											  <input class="form-username form-control" placeholder="Username Minimal 4 karakter dan maksimal 15 karakter" name="user_name" type="text" autofocus>
 										  </div>
 										  <div class="form-group">
 											  <input class="form-password form-control" placeholder="Password" name="user_password" type="password" value="" autofocus>
 										  </div>
-										  <div class="form-group">
+										  <!-- <div class="form-group">
 											  <input class="form-username form-control" placeholder="E-mail" name="user_email" type="email" autofocus>
 										  </div>
 										  <div class="form-group">
 											  <input class="form-username form-control" placeholder="Mobile No" name="user_mobile" type="number" value="" autofocus>
-										  </div>
+										  </div> -->
 											  <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register" >
 
 										 </fieldset>
