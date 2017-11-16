@@ -85,9 +85,9 @@ CREATE TABLE IF NOT EXISTS `posisi` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
--- Dumping data for table dbsprindik.posisi: ~5 rows (approximately)
+-- Dumping data for table dbsprindik.posisi: ~6 rows (approximately)
 DELETE FROM `posisi`;
 /*!40000 ALTER TABLE `posisi` DISABLE KEYS */;
 INSERT INTO `posisi` (`id`, `nama`) VALUES
@@ -95,7 +95,8 @@ INSERT INTO `posisi` (`id`, `nama`) VALUES
 	(2, 'HRD'),
 	(3, 'Keuangan'),
 	(4, 'Produk'),
-	(5, 'Web Developer');
+	(5, 'Web Developer'),
+	(6, 'Tes');
 /*!40000 ALTER TABLE `posisi` ENABLE KEYS */;
 
 
@@ -104,17 +105,20 @@ CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(15) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `nohp` varchar(255) DEFAULT NULL,
   `nama` varchar(50) DEFAULT NULL,
   `foto` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table dbsprindik.user: ~2 rows (approximately)
+-- Dumping data for table dbsprindik.user: ~7 rows (approximately)
 DELETE FROM `user`;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` (`id`, `username`, `password`, `nama`, `foto`) VALUES
-	(1, 'auwfar', 'f0a047143d1da15b630c73f0256d5db0', 'Achmad Chadil Auwfar', 'Koala.jpg'),
-	(2, 'ozil', 'f4e404c7f815fc68e7ce8e3c2e61e347', 'Mesut ', 'profil2.jpg');
+INSERT INTO `user` (`id`, `username`, `password`, `email`, `nohp`, `nama`, `foto`) VALUES
+	(1, 'auwfar', 'f0a047143d1da15b630c73f0256d5db0', NULL, NULL, 'Achmad Chadil Auwfar', 'Koala.jpg'),
+	(2, 'ozil', 'f4e404c7f815fc68e7ce8e3c2e61e347', NULL, NULL, 'Mesut ', 'profil2.jpg'),
+	(8, 'coba', 'c4ca4238a0b923820dcc509a6f75849b', 'coba@gmail.com', '123', 'Tes', 'Capture2.PNG');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
