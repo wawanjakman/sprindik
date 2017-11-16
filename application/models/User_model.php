@@ -8,11 +8,10 @@ class User_model extends CI_model{
 
 	public function nama_check($nama){
 
-	  $this->db->select('username');
+	  $this->db->select('*');
 	  $this->db->from('user');
 	  $this->db->where('username',$nama);
 	  $query=$this->db->get();
-	//var_dump($query);
 	  if($query->num_rows()>0){
 		return false;
 	  }else{

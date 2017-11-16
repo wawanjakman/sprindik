@@ -29,17 +29,14 @@ public function register_user(){
 		
 		
         print_r($user);
-		$this->user_model->register_user($user);
-
 		$nama_check=$this->user_model->nama_check($user['username']);
 		$email_check=$this->user_model->email_check($user['email']);
-
-		//var_dump($email_check);
 		if($nama_check&&$email_check){
 		  $this->user_model->register_user($user);
 		  $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
 		  redirect('user');
 		}else{
+			
 		  $this->session->set_flashdata('error_msg', 'Error occured,Try again.');
 		  redirect('user');
 		}
