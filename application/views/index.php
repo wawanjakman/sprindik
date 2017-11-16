@@ -121,12 +121,12 @@
 										  <div class="form-group">
 											  <input class="form-password form-control" placeholder="Password" name="user_password" type="password" value="" autofocus>
 										  </div>
-										  <!-- <div class="form-group">
+										  <div class="form-group">
 											  <input class="form-username form-control" placeholder="E-mail" name="user_email" type="email" autofocus>
 										  </div>
 										  <div class="form-group">
 											  <input class="form-username form-control" placeholder="Mobile No" name="user_mobile" type="number" value="" autofocus>
-										  </div> -->
+										  </div>
 											  <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register" >
 
 										 </fieldset>
